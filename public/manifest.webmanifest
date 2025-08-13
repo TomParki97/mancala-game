@@ -1,0 +1,8 @@
+{
+  "name": "Mancala",
+  "short_name": "Mancala",
+  "start_url": "/mancala-2/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "Mancala game with strong AI"
+}

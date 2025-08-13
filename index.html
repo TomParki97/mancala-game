@@ -1,8 +1,14 @@
-<!doctype html>
-<html>
-  <head><meta charset="utf-8"><title>Mancala — setup</title></head>
-  <body style="font-family:system-ui;margin:2rem">
-    <h1>Mancala — deployment wiring OK</h1>
-    <p>If you see this, GitHub Pages is working. Stage 2 will replace this with the full app.</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="${import.meta.env.BASE_URL}favicon.svg" />
+  <link rel="manifest" href="${import.meta.env.BASE_URL}manifest.webmanifest" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mancala</title>
+</head>
+<body class="min-h-screen bg-gray-100 text-gray-900">
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
 </html>
