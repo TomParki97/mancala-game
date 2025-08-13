@@ -23,13 +23,15 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-      - run: npm ci || npm i
-      - run: npm run build || echo "no build yet"
+      - run: npm ci
+      - run: npm run build
+      - name: Assert dist exists
+        run: test -d dist || (echo "::error::dist/ missing (build failed)"; exit 1)
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
-          if-no-files-found: ignore
+          if-no-files-found: error
 
   deploy:
     needs: build
